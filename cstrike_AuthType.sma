@@ -34,12 +34,12 @@
 
 enum AuthID:
 {
-    PENDING,
-    NO_SXE,
-    STEAM,
+    	PENDING,
+    	NO_SXE,
+	STEAM,
 	HLTV,
-    SXE,
-    BOT
+    	SXE,
+    	BOT
 }
 
 enum
@@ -49,13 +49,13 @@ enum
 }
 
 new const g_szAuthType[][][] =
-{   /* [AuthID]     <[StatusName],  [Color={ d (grey), r (red), y (yellow), w (white) }]> */
-    /* PENDING  */  { "VALIDANDO",  "d" },
-    /* NO_SXE   */  { "SEM SXE",    "r" },
-    /* STEAM    */  { "STEAM",      "y" },
-	/* HLTV     */  { "HLTV",       "y" },
-    /* SXE      */  { "COM SXE",    "y" },
-    /* BOT      */  { "BOT",        "y" }
+{	/* [AuthID]     <[StatusName],  [Color={ d (grey), r (red), y (yellow), w (white) }]> */
+	/* PENDING  */  { "PENDING",	"d" },
+	/* NO_SXE   */  { "NO SXE",	"r" },
+	/* STEAM    */  { "STEAM",	"y" },
+	/* HLTV     */  { "HLTV",	"y" },
+	/* SXE      */  { "SXE",	"y" },
+	/* BOT      */  { "BOT",	"y" }
 };
 
 new const g_szMenuSayCommands[][] = 
@@ -107,7 +107,7 @@ MenuClients( id, bool:bConsole=false )
 
     if ( bConsole )
     {
-        console_print( id, "[Authid Types] Lista de clientes:" );
+        console_print( id, "[Authid Types] Client list:" );
 
         for ( new i = 0, szClient[ 64 ]; i < iNum; i++ )
         {
@@ -121,7 +121,7 @@ MenuClients( id, bool:bConsole=false )
         {
         	return PLUGIN_HANDLED;
         }
-        new iMenu = menu_create( "\w[\yAuthid Types\w] Lista de clientes:", "MenuHandle" );
+        new iMenu = menu_create( "\w[\yAuthid Types\w] Client list:", "MenuHandle" );
         
         for ( new i = 0, iType, szClient[ 64 ]; i < iNum; i++ )
         {
