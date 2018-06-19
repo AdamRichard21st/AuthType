@@ -115,12 +115,8 @@ MenuClients( id, bool:bConsole=false )
             console_print( id, "%d. %s [%s]", i + 1, szClient, g_szAuthType[ _:g_Client[ Player[ i ] ] ][ _STATS ] );
         }
     }
-    else
+    else if ( id )
     {
-        if ( !id )
-        {
-        	return PLUGIN_HANDLED;
-        }
         new iMenu = menu_create( "\w[\yAuthid Types\w] Client list:", "MenuHandle" );
         
         for ( new i = 0, iType, szClient[ 64 ]; i < iNum; i++ )
