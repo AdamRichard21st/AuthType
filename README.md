@@ -12,7 +12,7 @@ Once clients connect and get their authids authorized by engine, it reads if pla
 Clients are able to check another clients' authid types by typing '/sxe' or '.sxe' on chat or 'amx_sxe' on console for a list menu or console list respectively.
 
 # Commands:
-* amx_say : Shows client's authid type on client/server console.
+* amx_sxe : Shows client's authid type on client/server console.
 * say /sxe : Shows client's authid type on list menu.
 * say .sxe : Shows client's authid type on list menu.
 
